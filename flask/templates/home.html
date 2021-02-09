@@ -1,0 +1,37 @@
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>yolo image recognition</title>
+</head>
+<body>
+
+
+
+    <div class="col-sm">
+      <h1><span >yolo image recognition</span></h1>
+    </div>
+
+    <div class="col-sm">
+      <form action = "/predict" method = "post" enctype="multipart/form-data">
+          <input type="file" id=file name="file" />
+          <button type=button onclick='test()'>Display</button>
+          <input type = "submit" value="Upload">
+          
+      </form>
+    </div>
+
+
+    <script>
+        function test() {
+            var file = document.getElementById('file').files[0];
+            var reader  = new FileReader();
+            reader.onload = function(e)  {
+                var image = document.createElement("img");
+                image.src = e.target.result;
+                document.body.appendChild(image);
+             }
+             reader.readAsDataURL(file);
+         }
+    </script>
+</body>
+</html>

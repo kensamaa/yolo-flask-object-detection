@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+  <!-- Required meta tags -->
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>yolo image recognition</title>
+</head>
+
+<body onload="speakText()">
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=29AoIBoV"></script>
+  
+  <div class="container">
+  <div class="row">
+
+    <div class="col-sm">
+      <span class="border border-primary">
+        <img src="{{ user_image }}" alt="User Image" width="500" height="600" class="img-thumbnail">
+      </span>
+    </div>
+
+    <div class="col-sm">
+      <h1 id="labels" onload="speakText()">i found this <span class="badge badge-secondary"></span>{{product}}</span></h1>
+    </div>
+   
+
+  </div>
+</div>
+<script>
+    function speakText(){
+        var list1 = {{ product | safe }};
+        var txt="i found  "+list1.toString()
+        var text = document.getElementById('labels').value;
+        console.log(txt)
+        responsiveVoice.speak(txt);
+    }
+
+</script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
