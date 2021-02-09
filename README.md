@@ -2,8 +2,8 @@
 
 <h2>disclaimer</h2>
 <p>download yolov3.weights fom net then decompress folders data and cfg</p>
-<p>demonstration : https://youtu.be/A4yjX0H-_KA</p>
 <p>yolo code from : https://www.youtube.com/watch?v=_UqmgHKdntU&t=149s&ab_channel=TheAIGuy</p>
+<p>demonstration : https://youtu.be/A4yjX0H-_KA</p>
 <h2>amelioration</h2>
 <ul>
   <li>yolo avec flask </li>
